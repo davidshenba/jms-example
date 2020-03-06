@@ -14,4 +14,4 @@ Run Maven install in your IDE or "mvn install" in command prompt from the locati
 
 Now, in your IDE, set Maven build goal to "spring-boot:run" and run it as Maven Build. Else, from command prompt, run "mvn spring-boot:run"
 
-Open a browser of your choice and hit "http://localhost:8080/transactions/<any id>"
+Open a browser of your choice and hit "http://localhost:8080/transactions"
