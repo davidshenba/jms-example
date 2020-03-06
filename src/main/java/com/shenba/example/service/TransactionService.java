@@ -1,5 +1,6 @@
 package com.shenba.example.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,15 @@ public class TransactionService {
 			return transaction.get();
 		}
 		return new Transaction();
+	}
+	
+	public List<Transaction> getAll() {
+		return transactionRepo.findAll();
+	}
+	
+	public Transaction save(Transaction transaction) {
+		log.info("Saving object: " + transaction.toString());
+		return transactionRepo.save(transaction);
 	}
 
 }

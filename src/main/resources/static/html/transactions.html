@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Transactions</title>
+		
+		<link rel="stylesheet" href="/css/material-css.css" type="text/css" />
+	
+		<script src="/js/jquery-3.4.1.js"></script>
+		<script src="/js/material-css.js"></script>
+		<script src="/js/transactions.js"></script>
+	</head>
+	<body class="mc-content">
+    		<h3 id="noTransactionsMsg">No Transactions to show!</h3>
+            <h3 id="transactionsTitle">Transactions</h3>
+			<table class="mc-table" id="transactionsTable">
+	              <thead>
+	                  <tr>
+	                      <th>Id</th>
+	                      <th>Description</th>
+	                      <th>Creditor</th>
+	                      <th>Debtor</th>
+	                      <th>Transaction Time</th>
+	                  </tr>
+	              </thead>
+	              <tbody id="transactionTableBody">
+	           	</tbody>
+	       	</table>
+	       	<a class="mc-button mc-button-text mc-clickable" id="addTransaction">New Transaction</a>
+	       	
+	       	
+		    <div class="mc-dialog" id="addTxDialog">
+		        <div class="mc-content">
+		            <h1 class="mc-title">New Transaction</h1>
+		            <a class="mc-button mc-button-text mc-clickable" id="saveTransaction">Save</a>
+		            <p class="mc-text">All fields are mandatory</p>
+		            
+		            <div class="mc-input mc-bg-darkpurple" >
+				        <input type="text" id="txDescription"/>
+				        <span class="mc-label">Description</span>
+				        <span class="mc-input-message">Describe the purpose of your transaction</span>
+				    </div>
+				    
+				    <div class="mc-input mc-bg-darkpurple" >
+				        <input type="text" id="txCreditor"/>
+				        <span class="mc-label">Creditor</span>
+				        <span class="mc-input-message">Use following format AccNo@name.IFCS</span>
+				    </div>
+				    
+				    <div class="mc-input mc-bg-darkpurple" >
+				        <input type="text" id="txDebtor"/>
+				        <span class="mc-label">Debtor</span>
+				        <span class="mc-input-message">Use following format AccNo@name.IFCS</span>
+				    </div>
+		        </div>
+		        <div class="mc-footer">
+		            <span class="mc-button mc-button-text mc-clickable" id="closeNewTxBtn">Close</span>
+		        </div>
+		    </div>
+	</body>
+</html>
